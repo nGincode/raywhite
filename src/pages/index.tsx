@@ -10,11 +10,14 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 export default function Index({ userData, setuserData, pageActive, setloadSkel }: any) {
     useEffect(() => {
         pageActive(<div><Link href="/">Loan Market</Link>/Dashboard</div>)
+    }, [pageActive]);
+
+    useEffect(() => {
         setloadSkel(true)
         setTimeout(() => {
             setloadSkel(false)
-        }, 700);
-    }, [pageActive, setloadSkel]);
+        }, 700)
+    }, [setloadSkel])
 
     let options1 = {
         chart: {

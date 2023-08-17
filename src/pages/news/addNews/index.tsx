@@ -14,11 +14,14 @@ import Editor from '../../components/editor';
 export default function AddNews({ userData, setuserData, pageActive, setloadSkel }: any) {
     useEffect(() => {
         pageActive(<div><Link href="/">Loan Market</Link>/<Link href="/news">News</Link>/Add News</div>)
+    }, [pageActive]);
+
+    useEffect(() => {
         setloadSkel(true)
         setTimeout(() => {
             setloadSkel(false)
-        }, 700);
-    }, [pageActive, setloadSkel]);
+        }, 700)
+    }, [setloadSkel])
 
     const [editorLoaded, setEditorLoaded] = useState(false);
     const [data, setData] = useState("");

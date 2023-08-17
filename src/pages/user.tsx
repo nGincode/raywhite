@@ -102,13 +102,14 @@ export default function User({ userData, setuserData, pageActive, setloadSkel }:
 
     useEffect(() => {
         pageActive(<div><Link href="/">Loan Market</Link>/User Management</div>)
+    }, [pageActive, categoryActive]);
 
+    useEffect(() => {
         setloadSkel(true)
         setTimeout(() => {
             setloadSkel(false)
-        }, 700);
-    }, [pageActive, categoryActive]);
-
+        }, 700)
+    }, [setloadSkel])
 
     useEffect(() => {
         if (globalFilter) {

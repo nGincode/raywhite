@@ -100,12 +100,14 @@ export default function News({ userData, setuserData, pageActive, setloadSkel }:
 
     useEffect(() => {
         pageActive(<div><Link href="/">Loan Market</Link>/News</div>)
+    }, [pageActive, categoryActive]);
 
+    useEffect(() => {
         setloadSkel(true)
         setTimeout(() => {
             setloadSkel(false)
-        }, 700);
-    }, [pageActive, categoryActive, setloadSkel]);
+        }, 700)
+    }, [setloadSkel])
 
 
     useEffect(() => {
