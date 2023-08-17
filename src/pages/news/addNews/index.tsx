@@ -133,6 +133,16 @@ export default function AddNews({ userData, setuserData, pageActive, setloadSkel
                         </label>
                         <ReactSelect data={[{ label: "Advisior", value: 'advisior' }]} id="status" defaultValue="" name="status" className="border border-black rounded w-full p-2 text-gray-700" />
                     </div>
+
+                    <div className="mt-5 font-bold">
+                        <div className="flex font-sm justify-center">
+                            <Link href="/news" className="p-1 px-4 border-2 border-black rounded text-black text-center mr-3 w-full"
+                                onClick={() => {
+                                }} >Save as Draft</Link>
+                            <Link href="/news" className="p-1 px-4 bg-cyan-500 rounded text-white text-center w-full"
+                            >Submit </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
